@@ -1,29 +1,36 @@
 <div class="side-bar">
     <div><i class="uil uil-ellipsis-h"></i></div>
     <ul class="side-bar__list list-one">
-     <!-- <li *ngFor = "let item of [1,1,1,1,1]"> se repite esas veces el li-->
-           <li *ngFor="let item of mainMenu.defaultOptions" >
-            <!--mainmenu.defaultoptions esta declarado en side-bar.components.ts-->
+                    <!-- -----------------ANOTACIÓN---------------- -->
+            <!--<li *ngFor = "let item of [1,1,1,1,1]"> se repite esas veces el li -->
+            <!-- ------------------------------------------ -->
+        <li *ngFor="let item of mainMenu.defaultOptions">
+         <!-- -----------------ANOTACIÓN---------------- -->
+         <!--mainmenu.defaultoptions esta declarado en side-bar.components.ts -->
+         <!-- ------------------------------------------ -->
             <div class="list-wrapper-item">
-                <i [ngClass]="['uil, item.icon']"></i>
-                <span>{{item.name}}</span>
+                <!-- -----------------ANOTACIÓN---------------- -->
+                <!--ngClass es como decir class="uil otraclasemas" pero pilla el item.icon del array del side-bar.ts -->
+                <!-- ------------------------------------------ -->
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item.name}}</span>
             </div>
         </li>
     </ul>
     <div class="side-bar__separator"></div>
     <ul class="side-bar__list list-two">
-        <li>
+        <li *ngFor="let item of mainMenu.accessLink">
             <div class="list-wrapper-item">
-                <i></i>
-                <span ></span> 
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item.name}}</span>
             </div>
         </li>
     </ul>
     <div class="side-bar__separator line-separator"></div>
     <ul class="side-bar__list list-three">
-        <li>
+        <li *ngFor="let item of customOptions">
             <div class="list-wrapper-item">
-                <span></span>
+                <span class="side-bar__list list-label">{{item.name}}</span>
             </div>
         </li>
     </ul>

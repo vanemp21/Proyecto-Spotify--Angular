@@ -7,19 +7,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-
+/*-----------------ANOTACIÓN----------------*/
+/* Son dos arrays donde declara que de cualquier tipo y estan vacios*/
+/*-------------------------------------------*/
   mainMenu: {
     defaultOptions: Array<any>, accessLink: Array<any>
   } = { defaultOptions: [], accessLink: [] }  
 
 
-  customOptions: Array<any> = []
+  customOptions: Array<any> = [] 
+
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [ 
-      //dddddd red el defaultOptions del mainMenu de este archivo.ts
+      /*-----------------ANOTACIÓN----------------*/
+      /*el defaultOptions del mainMenu de este archivo.ts*/
+      /*-------------------------------------------*/
+      
       {
         name: 'Home',
         icon: 'uil uil-estate',

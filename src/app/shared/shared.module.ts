@@ -18,6 +18,9 @@ import { HeaderUserComponent } from './components/header-user/header-user.compon
  
 
   ],
+  /*-----------------ANOTACIÓN----------------*/
+  /*El archivo padre que es este exporta estos componentes para luego importar SharedModule donde se necesite*/
+  /*-------------------------------------------*/
   exports:[
     SideBarComponent,
     MediaPlayerComponent,

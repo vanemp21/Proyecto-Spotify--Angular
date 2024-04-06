@@ -11,7 +11,13 @@ import { SharedModule } from '@shared/shared.module';
   ],
   imports: [
     CommonModule,
+    /*-----------------ANOTACIÓN----------------*/
+    /*El homeRoutingModule es el modulo donde esta el componente de este apartado*/
+    /*-------------------------------------------*/
     HomeRoutingModule,
+    /*-----------------ANOTACIÓN----------------*/
+    /*Importamos los componentes de shared.module.ts que es una agrupacion de componentes exportados que son compartidos en plan header o footer*/
+    /*-------------------------------------------*/
     SharedModule
   ]
 })
