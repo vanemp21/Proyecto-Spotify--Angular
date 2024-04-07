@@ -1,1 +1,20 @@
-<p>section-generic works!</p>
+<div class="section--generic">
+    <h1 class="section--generic__title">{{title}}</h1>
+
+    <div class="section--generic__player--zone">
+        <!-- -----------------ANOTACIÓN---------------- -->
+        <!-- Lo del ngclass le esta diciendo que si card-small es lo mismo que la clase card-small lo muestra y esta declarado en 
+        el padre track-page.component.html si tiene la clase esa mostrara el small y si no el big-->
+        <!-- ------------------------------------------ -->
+        <ul class="player--list" [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big'}">
+            <li *ngFor="let track of dataTracks"> <!--el datatrack es otro input declarado en el componente.ts
+            los ngFor recorren arrays-->
+            <!-- -----------------ANOTACIÓN---------------- -->
+            <!-- el app-card-player esta esperando que le pase datos de track y de mode pero como estan declarados en el propio card-player como track y mode 
+            pilla los datos de ahi -->
+            <!-- ------------------------------------------ -->
+                <app-card-player [track]="track"  [mode]="mode"></app-card-player>
+            </li>
+        </ul>
+    </div>
+</div>
