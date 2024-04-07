@@ -1,7 +1,17 @@
 <app-side-bar></app-side-bar>
+<app-media-player></app-media-player>
 <!-- -----------------ANOTACIÓN---------------- -->
 <!-- Si pones <router-outlet name="loquesea"> luego en el componente-routing.module.ts
     aparte de tener el path y component debes poner outlet: 'loquesea', si no pillara
 por orden de jerarquia los router-outlet -->
 <!-- ------------------------------------------ -->
-<router-outlet></router-outlet>
+
+
+<!-- -----------------ANOTACIÓN---------------- -->
+<!--las cosas que estén dentro del router-outlet solo se actualizará si esta en el componente home-page
+router-outlet significa que es un contenedor de rutas, al poner aqui el <router-outlet></router-outlet> solo afectará a las rutas
+osea al home-routing.module.ts del home -->
+<!-- ------------------------------------------ -->
+<div class="home-wrapper">
+    <router-outlet></router-outlet> 
+</div>

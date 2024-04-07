@@ -16,7 +16,9 @@ export const routes: Routes = [
         /*-----------------ANOTACIÓN----------------*/
         /*path: 'home', //esto seria /home el path principal*/
         /*path: ':username/:other' puedes mandar parametros*/
-        /*Aqui lo que defino es la ruta de HomeModule*/
+        /*Aqui lo que defino es la ruta de HomeModule
+        que es la parte central que se va a actualizar y el homepage tiene
+        definido dentro otras rutas*/
         /*-------------------------------------------*/
         component: HomePageComponent,
         loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule),
