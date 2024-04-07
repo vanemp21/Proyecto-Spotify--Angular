@@ -13,7 +13,7 @@ export class MediaPlayerComponent implements OnInit {
   mockCover: TrackModel = {
     cover: 'https://i.scdn.co/image/ab67616d0000b2732d1f4980561c7b2a9920c700',
     album: 'Gioli & Assia',
-    name:'BEBE (Oficial)',
+    name: 'BEBE (Oficial)',
     url: 'https://localhost/track',
     _id: 1
   }
