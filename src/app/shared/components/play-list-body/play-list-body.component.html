@@ -1,16 +1,33 @@
 <div class="play-list-body">
     <ul class="play-list-table-header">
-        <li >Nombre ❤</li>
-        <li >álbum 🆗</li>
+        <!-- -----------------ANOTACIÓN---------------- -->
+        <!-- Si hace click en nombre va a ordenarmelo ascendentemente por el name, igual con album-->
+        <!-- ------------------------------------------ -->
+        <li (click)="changeSort('name')">Nombre ❤</li>
+        <li (click)="changeSort('album')">álbum 🆗</li>
         <li>fecha incorporación 🍌😁</li>
         <li><i class="uil uil-clock-eight"></i></li>
     </ul>
-    <ul class="play-list-rows" *ngFor="let track of tracks">
+    <!-- el ngFor recorre el array de tracks, el orderList es un pipe que dice como ordenarlo en el order-list-pipe.ts-->
+    <ul class="play-list-rows" *ngFor="let track of tracks | orderList:optionSort.property:optionSort.order">
         <li class="track-name">
+            <!-- -----------------ANOTACIÓN---------------- -->
+            <!--en el context:{track:track} el primer track es el nombre de la variable, que esta declarado en el ngtemplate
+            de abajo <ng-template #coverSection let-track="track"> 
+            luego el segundo track es el track del ngfor lo que esta haciendo es recorrer con el for
+            el numero de arrays/artistas que existen y repite el ngcontainer  -->
+            <!-- ------------------------------------------ -->
+            <!-- Si aquí fuese propiedad1:
+            <ng-container *ngTemplateOutlet="coverSection;context:{propiedad1:track}"></ng-container>
+            abajo en el template deberia quedar así:
+            <ng-template #coverSection let-track="propiedad1">
+            si en el context el primer valor y el segundo se llama igual se puede dejar como {track} a secas -->
+
             <ng-container *ngTemplateOutlet="coverSection;context:{track:track}"></ng-container>
         </li>
         <li class="track-name-opacity">
             {{track.album}}
+        
         </li>
         <li class="track-name-opacity">
             {{track.album}}
@@ -23,6 +40,9 @@
 </div>
 
 <!--template del cover-->
+<!-- -----------------ANOTACIÓN---------------- -->
+<!-- el track de let-track es el track que se usa en track.cover, track.name, track.artist etc -->
+<!-- ------------------------------------------ -->
 <ng-template #coverSection let-track="track">
 
     <div class="cover-section">

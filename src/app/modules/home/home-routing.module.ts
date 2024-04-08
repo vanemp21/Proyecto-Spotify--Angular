@@ -25,7 +25,7 @@ const routes: Routes = [
   /* Cuando no encuentra la ruta lo redirecciona a tracks*/
   /*-------------------------------------------*/
   path: '**',
-  redirectTo: '/tracks'
+  redirectTo: '/auth/login'
  }
 
 ];

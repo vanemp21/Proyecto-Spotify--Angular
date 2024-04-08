@@ -16,8 +16,11 @@
 
 <!-- Diseño del mode (big)-->
 <div *ngIf="mode==='big'" class="card-player player-big">
-
-    <img [src]="track.cover" alt="" class="cover">
+<!-- -----------------ANOTACIÓN---------------- -->
+<!-- Lo de appImgBroken esta declarado en img-broken.directive.ts que es basicamente
+si la imagen no se ve, que ponga otra-->
+<!-- ------------------------------------------ -->
+    <img appImgBroken [src]="track.cover" alt="" class="cover">
 
     <div class="content-player">
         <div class="title-track">{{track.name}}</div>

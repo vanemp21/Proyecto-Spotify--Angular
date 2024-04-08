@@ -4,7 +4,9 @@
                     <!-- -----------------ANOTACIÓN---------------- -->
             <!--<li *ngFor = "let item of [1,1,1,1,1]"> se repite esas veces el li -->
             <!-- ------------------------------------------ -->
-        <li *ngFor="let item of mainMenu.defaultOptions">
+            <!--el routerlink tras importarlo en el shared.module.ts puedes decirle a la ruta que debe ir
+            al estar pasando un ngfor le dices que pille el item.router-->
+        <li [routerLink]="item.router" [queryParams]="{key1:'value1'}" *ngFor="let item of mainMenu.defaultOptions">
          <!-- -----------------ANOTACIÓN---------------- -->
          <!--mainmenu.defaultoptions esta declarado en side-bar.components.ts -->
          <!-- ------------------------------------------ -->

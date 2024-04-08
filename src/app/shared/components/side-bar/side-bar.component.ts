@@ -84,6 +84,6 @@ export class SideBarComponent implements OnInit {
         key3: 'value3'
       }
     })
-    console.log($event)
+
   }
 }

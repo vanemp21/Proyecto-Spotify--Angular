@@ -7,6 +7,9 @@ import { CardPlayerComponent } from './components/card-player/card-player.compon
 import { SectionGenericComponent } from './components/section-generic/section-generic.component';
 import { PlayListBodyComponent } from './components/play-list-body/play-list-body.component';
 import { PlayListHeaderComponent } from './components/play-list-header/play-list-header.component';
+import { RouterModule } from '@angular/router';
+import { OrderListPipe } from './pipe/order-list.pipe';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 
 /*-----------------ANOTACIÓN----------------*/
@@ -21,10 +24,13 @@ import { PlayListHeaderComponent } from './components/play-list-header/play-list
     CardPlayerComponent,
     SectionGenericComponent,
     PlayListBodyComponent,
-    PlayListHeaderComponent
+    PlayListHeaderComponent,
+    OrderListPipe,
+    ImgBrokenDirective
   ],
   imports: [
     CommonModule,
+    RouterModule
  
 
   ],
@@ -32,13 +38,15 @@ import { PlayListHeaderComponent } from './components/play-list-header/play-list
   /*El archivo padre que es este exporta estos componentes para luego importar SharedModule donde se necesite*/
   /*-------------------------------------------*/
   exports:[
-    SideBarComponent,
-    MediaPlayerComponent,
-    HeaderUserComponent,
-    CardPlayerComponent,
-    SectionGenericComponent,
-    PlayListBodyComponent,
-    PlayListHeaderComponent
+    SideBarComponent, //es el sidebar
+    MediaPlayerComponent, // la barra del play stop etc
+    HeaderUserComponent, // todavia no se ha tocado
+    CardPlayerComponent, //cada recuadro del artista
+    SectionGenericComponent, //el genero de la musica
+    PlayListBodyComponent, //la parte donde sale el like, la top del home (Canciones que te gustan)
+    PlayListHeaderComponent, // la parte de abajo donde sale la lista de canciones
+    OrderListPipe, //para ordenar por nombre, album etc
+    ImgBrokenDirective // verificar si esta rota o no una imagen
   ]
 })
 
