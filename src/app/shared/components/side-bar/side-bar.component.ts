@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
@@ -17,7 +18,7 @@ export class SideBarComponent implements OnInit {
 
   customOptions: Array<any> = [] 
 
-
+//por si tienes que meter algun servicio de otro componente en otro sitio (private trackService:TrackService)
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -73,6 +74,15 @@ export class SideBarComponent implements OnInit {
         router: ['/']
       }
     ]
+// voy a escuchar lo que está en trackservice en datarandom, me suscribo, agarro la canción que está entrando (response)
+    // this.trackService.dataTracksRandom$
+    // .subscribe((response:any) => {
+    //   this.customOptions.push({//añade al array de arriba de customoptions una canción más
+    //     name: response[0].name,
+    //     router: []
+    //   })
+    // } )
+
 
   }
 

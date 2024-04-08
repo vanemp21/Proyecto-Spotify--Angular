@@ -22,7 +22,7 @@ const routes: Routes = [
  },
  {
   /*-----------------ANOTACIÓN----------------*/
-  /* Cuando no encuentra la ruta lo redirecciona a tracks*/
+  /* Cuando no encuentra la ruta lo redirecciona a auth login*/
   /*-------------------------------------------*/
   path: '**',
   redirectTo: '/auth/login'

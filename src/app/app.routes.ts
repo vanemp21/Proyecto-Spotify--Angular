@@ -4,7 +4,7 @@ import { HomePageComponent } from '@modules/home/pages/home-page/home-page.compo
 /*-----------------ANOTACIÓN----------------*/
 /*Rutas principale
 Es el <routing></routing> del app.component.html donde muestra todo
-Las rutas que están aquí son los componentes que se van a actualizar por lo tanto romper el sidebar, mediaplayer etc */
+Las rutas que están aquí son los componentes que se van a actualizar por lo tanto romper */
 /*-------------------------------------------*/
 export const routes: Routes = [
     {

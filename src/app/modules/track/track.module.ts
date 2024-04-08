@@ -7,6 +7,7 @@ import { TrackPageComponent } from './pages/track-page/track-page.component';
 
 
 
+
 @NgModule({
   declarations: [
   TrackPageComponent
@@ -15,6 +16,7 @@ import { TrackPageComponent } from './pages/track-page/track-page.component';
     CommonModule,
     TrackRoutingModule,
     SharedModule
+
   ]
 })
 export class TrackModule { }

@@ -27,7 +27,9 @@ si la imagen no se ve, que ponga otra-->
         <div class="sub-title-track">{{track.name}}</div>
     </div>
     <div class="buttons-player">
-        <button  *ngIf="true" class="play-btn">
+        <!--el sendplay es una función que está en el card-player.component que lo que hace que al hacer click
+        al play envia ese track/cancion a la función que a su vez lo manda al reproductor multimedia-->
+        <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
             <i class="uil " [ngClass]="{'uil-play':true}"></i>
         </button>
         <button *ngIf="false" class="play-btn">
