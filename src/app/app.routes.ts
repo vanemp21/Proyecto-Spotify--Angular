@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { SessionGuard } from '@core/guards/session.guard';
 import { HomePageComponent } from '@modules/home/pages/home-page/home-page.component';
 
 /*-----------------ANOTACIÓN----------------*/
@@ -9,7 +10,8 @@ Las rutas que están aquí son los componentes que se van a actualizar por lo ta
 export const routes: Routes = [
     {
         path: '',
-        loadChildren: () => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
+        loadChildren: () => import(`./modules/auth/auth.module`).then(m => m.AuthModule),
+      
     },
     {
         path: '',
@@ -22,6 +24,7 @@ export const routes: Routes = [
         /*-------------------------------------------*/
         component: HomePageComponent,
         loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule),
+        canActivate: [SessionGuard]
 
     }
 

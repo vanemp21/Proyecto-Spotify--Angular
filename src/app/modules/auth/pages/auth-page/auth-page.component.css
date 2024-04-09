@@ -127,7 +127,7 @@ button:disabled{
     transition: none; /* Anula cualquier transición */
     cursor: not-allowed;
 }
-.errorSesion{
+.errorSession{
     color:red;
   
 }
