@@ -16,19 +16,14 @@
 
 <!-- Diseño del mode (big)-->
 <div *ngIf="mode==='big'" class="card-player player-big">
-<!-- -----------------ANOTACIÓN---------------- -->
-<!-- Lo de appImgBroken esta declarado en img-broken.directive.ts que es basicamente
-si la imagen no se ve, que ponga otra-->
-<!-- ------------------------------------------ -->
-    <img appImgBroken [src]="track.cover" alt="" class="cover">
+
+    <img appImgBroken [customImg]="'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png'" [src]="track.cover" alt="" class="cover">
 
     <div class="content-player">
         <div class="title-track">{{track.name}}</div>
         <div class="sub-title-track">{{track.name}}</div>
     </div>
     <div class="buttons-player">
-        <!--el sendplay es una función que está en el card-player.component que lo que hace que al hacer click
-        al play envia ese track/cancion a la función que a su vez lo manda al reproductor multimedia-->
         <button (click)="sendPlay(track)" *ngIf="true" class="play-btn">
             <i class="uil " [ngClass]="{'uil-play':true}"></i>
         </button>

@@ -1,19 +1,20 @@
+import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@modules/auth/services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
-import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth-page',
-  templateUrl: './auth-page.component.html',
-  styleUrl: './auth-page.component.css'
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css']
 })
-export class AuthPageComponent implements OnInit {
+export class LoginPageComponent implements OnInit {
   errorSession: boolean = false
   formLogin: UntypedFormGroup = new UntypedFormGroup({});
 
-  constructor(private authService: AuthService, private cookie: CookieService, private router: Router) { }
+  constructor(private authService: AuthService, private cookie: CookieService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.formLogin = new UntypedFormGroup(
@@ -44,7 +45,7 @@ export class AuthPageComponent implements OnInit {
       },
         err => {//TODO error 400>=
           this.errorSession = true
-          console.log('⚠⚠⚠⚠Ocurrió error con tu email o password');
+          console.log('⚠⚠⚠⚠Ocurrio error con tu email o password');
         })
 
   }

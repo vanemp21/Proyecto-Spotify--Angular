@@ -7,12 +7,6 @@
             <button class="social-btn"><i class="uil uil-google"></i> Continuar con Google</button>
         </div>
         <div class="separator"></div>
-        <!-- -----------------ANOTACIÓN---------------- -->
-        <!--El form group seria el formulario y el form control son los inputs de los que esta constituido -->
-        <!-- ------------------------------------------ -->
-        <!--hay que declarar el formulario como formgroup y los input como formcontrolname con las variables declaradas
-        en el auth-page.component.ts-->
-        <!--al añadir formgroup se habilita el ngsubmit-->
         <form (ngSubmit)="sendLogin()" [formGroup]="formLogin" class="login-auth-form">
             <div class="form-group">
                 <label for="email">Dirección de correo o nombre de usuario</label>
@@ -25,17 +19,12 @@
             <div class="form-steps">
                 <a class="link" href="">¿Se te ha olvidado la contraseña?</a>
             </div>
-            <!--este errorSesion del ngif está declarado en el auth.service-->
-            <div class="errorSession" *ngIf="errorSession">
-            Ocurrió un error con tu email o password
+            <div *ngIf="errorSession">
+                Ocurrio un error con tu email o password
             </div>
             <div class="form-action">
                 <button [disabled]="formLogin.invalid" class="login social-btn">Iniciar sesión</button>
             </div>
         </form>
-        <!-- <div>
-            <hr> Raw: {{formLogin.value | json}}
-        </div> con esto puedo ver los inputs que están dentro del formgroup y si escribo en ello se ve su valor-->
-        <!--tambien puedes hacer uso de {{formLogin.valid}} o {{formLogin.invalid}} -->
     </div>
 </div>

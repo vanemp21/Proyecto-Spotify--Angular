@@ -8,10 +8,12 @@ describe('FavoritePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FavoritePageComponent]
+      declarations: [ FavoritePageComponent ]
     })
     .compileComponents();
-    
+  });
+
+  beforeEach(() => {
     fixture = TestBed.createComponent(FavoritePageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

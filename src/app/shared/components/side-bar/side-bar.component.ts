@@ -1,32 +1,23 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-/*-----------------ANOTACIÓN----------------*/
-/* Son dos arrays donde declara que de cualquier tipo y estan vacios*/
-/*-------------------------------------------*/
+
   mainMenu: {
     defaultOptions: Array<any>, accessLink: Array<any>
-  } = { defaultOptions: [], accessLink: [] }  
+  } = { defaultOptions: [], accessLink: [] }
 
+  customOptions: Array<any> = []
 
-  customOptions: Array<any> = [] 
-
-//por si tienes que meter algun servicio de otro componente en otro sitio (private trackService:TrackService)
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.mainMenu.defaultOptions = [ 
-      /*-----------------ANOTACIÓN----------------*/
-      /*el defaultOptions del mainMenu de este archivo.ts*/
-      /*-------------------------------------------*/
-      
+    this.mainMenu.defaultOptions = [
       {
         name: 'Home',
         icon: 'uil uil-estate',
@@ -74,15 +65,6 @@ export class SideBarComponent implements OnInit {
         router: ['/']
       }
     ]
-// voy a escuchar lo que está en trackservice en datarandom, me suscribo, agarro la canción que está entrando (response)
-    // this.trackService.dataTracksRandom$
-    // .subscribe((response:any) => {
-    //   this.customOptions.push({//añade al array de arriba de customoptions una canción más
-    //     name: response[0].name,
-    //     router: []
-    //   })
-    // } )
-
 
   }
 
@@ -94,6 +76,6 @@ export class SideBarComponent implements OnInit {
         key3: 'value3'
       }
     })
-
+    console.log($event)
   }
 }

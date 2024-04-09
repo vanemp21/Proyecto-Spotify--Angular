@@ -1,10 +1,15 @@
-import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { provideRouter } from '@angular/router';
+// app.config.ts
 
-import { routes } from './app.routes';
+import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
 import { provideClientHydration } from '@angular/platform-browser';
-import {  provideHttpClient, withFetch } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import { routes } from './app.routes'; // Importa AppRoutingModule y las rutas
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideHttpClient(withFetch())]
+  providers: [
+    provideRouter(routes), // Utiliza las rutas exportadas de AppRoutingModule
+    provideClientHydration(),
+    provideHttpClient(withFetch())
+  ]
 };

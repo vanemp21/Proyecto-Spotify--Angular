@@ -105,15 +105,8 @@
 }
 
 input.ng-invalid.ng-touched {
-    border: solid 2px red !important;
-    box-shadow: 0 0 5px red;
+    border: solid 2px red !important
 }
-input.ng-valid.ng-touched{
-    border: solid 2px green !important;
-    box-shadow: 0 0 5px green;
-}
-
-
 button{
     transition: transform 0.3s ease;
 

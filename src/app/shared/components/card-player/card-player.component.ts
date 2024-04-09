@@ -5,17 +5,19 @@ import { MultimediaService } from '@shared/services/multimedia.service';
 @Component({
   selector: 'app-card-player',
   templateUrl: './card-player.component.html',
-  styleUrl: './card-player.component.css'
+  styleUrls: ['./card-player.component.css']
 })
 export class CardPlayerComponent implements OnInit {
-  @Input() mode: 'small' | 'big' = 'small';
+  @Input() mode: 'small' | 'big' = 'small'
   @Input() track: TrackModel = { _id: 0, name: '', album: '', url: '', cover: '' };
+
   constructor(private multimediaService: MultimediaService) { }
 
   ngOnInit(): void {
   }
-  //Esto envia la canción al reproductor
+
   sendPlay(track: TrackModel): void {
-    this.multimediaService.callback.emit(track)
+    this.multimediaService.trackInfo$.next(track)
   }
+
 }
