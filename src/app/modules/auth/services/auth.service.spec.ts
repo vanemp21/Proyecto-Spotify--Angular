@@ -50,17 +50,6 @@ describe('AuthService', () => {
     })
 
 
-  it('TEST de suma de 2 + 3', () => {
 
-    const a = 2
-    const b = 3
-
-
-    const c = service.suma(a, b)
-
-
-    expect(c).toEqual(5)
-
-  })
 
 });
