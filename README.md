@@ -1,6 +1,10 @@
 # Spotify
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.
+
+## Download and start my API --> [Spotify API](https://github.com/vanemp21/Proyecto-Spotify-Api--Angular)
+
+Download the file, open it with VSC and type `node app.js` in a terminal.
 
 ## Development server
 
@@ -25,3 +29,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
