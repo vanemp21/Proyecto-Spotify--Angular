@@ -8,9 +8,9 @@ describe('SectionGenericComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [SectionGenericComponent]
-})
-    .compileComponents();
+      imports: [SectionGenericComponent]
+    })
+      .compileComponents();
   });
 
   beforeEach(() => {

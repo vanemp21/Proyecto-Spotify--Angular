@@ -27,7 +27,7 @@ export class TrackService {
   }
 
   /**
-   * //TODO {data:[..1,...2,..2]}
+   * 
    * 
    * @returns 
    */
@@ -49,9 +49,6 @@ export class TrackService {
     return this.http.get(`${this.URL}/tracks`)
       .pipe(
         mergeMap(({ data }: any) => this.skipById(data, 2)),
-        // map((dataRevertida) => { //TODO aplicar un filter comun de array
-        //   return dataRevertida.filter((track: TrackModel) => track._id !== 1)
-        // })
         catchError((err) => {
           const { status, statusText } = err;
           return of([])

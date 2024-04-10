@@ -4,11 +4,11 @@ import { MediaPlayerComponent } from '../../../../shared/components/media-player
 import { SideBarComponent } from '../../../../shared/components/side-bar/side-bar.component';
 
 @Component({
-    selector: 'app-home-page',
-    templateUrl: './home-page.component.html',
-    styleUrls: ['./home-page.component.css'],
-    standalone: true,
-    imports: [SideBarComponent, MediaPlayerComponent, RouterOutlet]
+  selector: 'app-home-page',
+  templateUrl: './home-page.component.html',
+  styleUrls: ['./home-page.component.css'],
+  standalone: true,
+  imports: [SideBarComponent, MediaPlayerComponent, RouterOutlet]
 })
 export class HomePageComponent implements OnInit {
 

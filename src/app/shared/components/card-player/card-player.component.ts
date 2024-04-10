@@ -5,11 +5,11 @@ import { ImgBrokenDirective } from '../../directives/img-broken.directive';
 import { NgIf, NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-card-player',
-    templateUrl: './card-player.component.html',
-    styleUrls: ['./card-player.component.css'],
-    standalone: true,
-    imports: [NgIf, NgClass, ImgBrokenDirective]
+  selector: 'app-card-player',
+  templateUrl: './card-player.component.html',
+  styleUrls: ['./card-player.component.css'],
+  standalone: true,
+  imports: [NgIf, NgClass, ImgBrokenDirective]
 })
 export class CardPlayerComponent implements OnInit {
   @Input() mode: 'small' | 'big' = 'small'
@@ -21,7 +21,7 @@ export class CardPlayerComponent implements OnInit {
   }
 
   sendPlay(track: TrackModel): void {
- this.multimediaService.trackInfo$.next(track)
+    this.multimediaService.trackInfo$.next(track)
   }
 
 }

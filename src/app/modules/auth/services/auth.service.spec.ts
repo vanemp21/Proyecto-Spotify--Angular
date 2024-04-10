@@ -21,12 +21,12 @@ describe('AuthService', () => {
     expect(service).toBeTruthy();
   });
 
-  //TODO: Prueba del sendCredentials
+
 
   it('Debe de retornar un objecto con "data" y "tokenSession"',
     (done: DoneFn) => {
 
-      //TODO: Arrange
+
 
       const user: any = mockUser.userOk
       const mockResponse = {
@@ -35,12 +35,12 @@ describe('AuthService', () => {
       }
 
       httpClientSpy.post.and.returnValue(
-        of(mockResponse) //TODO: ✔✔✔ ya es observable
+        of(mockResponse)
       )
 
-      //TODO: Act
+
       service.sendCredentials(user.email, user.password)
-        .subscribe(responseApi => {//TODO ['data','tokenSession']
+        .subscribe(responseApi => {
           const getProperties = Object.keys(responseApi)
           expect(getProperties).toContain('data')
           expect(getProperties).toContain('tokenSession')

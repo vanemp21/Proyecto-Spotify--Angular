@@ -6,7 +6,7 @@ describe('InjectSessionInterceptor', () => {
   beforeEach(() => TestBed.configureTestingModule({
     providers: [
       InjectSessionInterceptor
-      ]
+    ]
   }));
 
   it('should be created', () => {

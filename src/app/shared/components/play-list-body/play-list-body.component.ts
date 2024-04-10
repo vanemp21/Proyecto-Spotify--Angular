@@ -6,11 +6,11 @@ import { NgFor, NgTemplateOutlet } from '@angular/common';
 
 
 @Component({
-    selector: 'app-play-list-body',
-    templateUrl: './play-list-body.component.html',
-    styleUrls: ['./play-list-body.component.css'],
-    standalone: true,
-    imports: [NgFor, NgTemplateOutlet, ImgBrokenDirective, OrderListPipe]
+  selector: 'app-play-list-body',
+  templateUrl: './play-list-body.component.html',
+  styleUrls: ['./play-list-body.component.css'],
+  standalone: true,
+  imports: [NgFor, NgTemplateOutlet, ImgBrokenDirective, OrderListPipe]
 })
 export class PlayListBodyComponent implements OnInit {
   @Input() tracks: TrackModel[] = []
@@ -27,7 +27,7 @@ export class PlayListBodyComponent implements OnInit {
       property,
       order: order === 'asc' ? 'desc' : 'asc'
     }
-    console.log(this.optionSort);
+
 
   }
 

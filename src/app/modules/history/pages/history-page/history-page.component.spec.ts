@@ -9,8 +9,8 @@ describe('HistoryPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule, HistoryPageComponent]
-})
+      imports: [HttpClientTestingModule, HistoryPageComponent]
+    })
       .compileComponents();
   });
 

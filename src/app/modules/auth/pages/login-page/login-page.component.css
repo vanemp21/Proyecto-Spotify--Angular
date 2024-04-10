@@ -3,7 +3,7 @@
     width: 100vw;
     height: 100vh;
     background-image: url('../../../../../assets/images/fondo.jpg');
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-color: #c3c3c3;
     color: var(--color-3);
@@ -111,22 +111,27 @@
 input.ng-invalid.ng-touched {
     border: solid 2px red !important
 }
-button{
+
+button {
     transition: transform 0.3s ease;
 
 
 }
 
-button:hover{
-    transform: scale(1.05); 
+button:hover {
+    transform: scale(1.05);
 
 }
-button:disabled{
-    transform: none; /* Anula cualquier transformación */
-    transition: none; /* Anula cualquier transición */
+
+button:disabled {
+    transform: none;
+    /* Anula cualquier transformación */
+    transition: none;
+    /* Anula cualquier transición */
     cursor: not-allowed;
 }
-.errorSession{
-    color:red;
-  
+
+.errorSession {
+    color: red;
+
 }

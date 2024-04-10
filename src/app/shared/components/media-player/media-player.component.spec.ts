@@ -8,9 +8,9 @@ describe('MediaPlayerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [MediaPlayerComponent]
-})
-    .compileComponents();
+      imports: [MediaPlayerComponent]
+    })
+      .compileComponents();
   });
 
   beforeEach(() => {

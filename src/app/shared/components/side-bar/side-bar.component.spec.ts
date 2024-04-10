@@ -9,8 +9,8 @@ describe('SideBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-    imports: [RouterTestingModule, SideBarComponent]
-})
+      imports: [RouterTestingModule, SideBarComponent]
+    })
       .compileComponents();
   });
 

@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 import { NgIf } from '@angular/common';
 
 @Component({
-    selector: 'app-login-page',
-    templateUrl: './login-page.component.html',
-    styleUrls: ['./login-page.component.css'],
-    standalone: true,
-    imports: [ReactiveFormsModule, NgIf]
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css'],
+  standalone: true,
+  imports: [ReactiveFormsModule, NgIf]
 })
 export class LoginPageComponent implements OnInit {
   errorSession: boolean = false
@@ -39,16 +39,15 @@ export class LoginPageComponent implements OnInit {
   sendLogin(): void {
     const { email, password } = this.formLogin.value
     this.authService.sendCredentials(email, password)
-      //TODO: 200 <400
-      .subscribe(responseOk => { //TODO: Cuando el usuario credenciales Correctas ✔✔
-        console.log('Session iniciada correcta', responseOk);
+
+      .subscribe(responseOk => {
+
         const { tokenSession, data } = responseOk
-        this.cookie.set('token', tokenSession, 4, '/') //TODO:📌📌📌📌
+        this.cookie.set('token', tokenSession, 4, '/')
         this.router.navigate(['/', 'tracks'])
       },
-        err => {//TODO error 400>=
+        err => {
           this.errorSession = true
-          console.log('⚠⚠⚠⚠Ocurrio error con tu email o password');
         })
 
   }

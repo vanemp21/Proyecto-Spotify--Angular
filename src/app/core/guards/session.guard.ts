@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class SessionGuard  {
+export class SessionGuard {
 
   constructor(
     private cookieService: CookieService,
@@ -30,7 +30,7 @@ export class SessionGuard  {
       return token
 
     } catch (e) {
-      console.log('Algo sucedio ?? 🔴', e);
+
       return false
     }
 

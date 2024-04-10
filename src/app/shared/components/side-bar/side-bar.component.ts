@@ -3,11 +3,11 @@ import { Router, RouterLink } from '@angular/router';
 import { NgFor, NgClass } from '@angular/common';
 
 @Component({
-    selector: 'app-side-bar',
-    templateUrl: './side-bar.component.html',
-    styleUrls: ['./side-bar.component.css'],
-    standalone: true,
-    imports: [NgFor, RouterLink, NgClass]
+  selector: 'app-side-bar',
+  templateUrl: './side-bar.component.html',
+  styleUrls: ['./side-bar.component.css'],
+  standalone: true,
+  imports: [NgFor, RouterLink, NgClass]
 })
 export class SideBarComponent implements OnInit {
 
@@ -32,10 +32,10 @@ export class SideBarComponent implements OnInit {
         router: ['/', 'history']
       },
       {
-        name: 'Tu biblioteca',
+        name: 'Biblioteca',
         icon: 'uil uil-chart',
-        router: ['/', 'favorites'],
-        query: { hola: 'mundo' }
+        router: ['/', 'tracks'],
+
       }
     ]
 
@@ -79,6 +79,6 @@ export class SideBarComponent implements OnInit {
         key3: 'value3'
       }
     })
-    console.log($event)
+
   }
 }

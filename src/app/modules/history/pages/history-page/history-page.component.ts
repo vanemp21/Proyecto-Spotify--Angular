@@ -7,14 +7,14 @@ import { PlayListBodyComponent } from '../../../../shared/components/play-list-b
 import { SearchComponent } from '../../components/search/search.component';
 
 @Component({
-    selector: 'app-history-page',
-    templateUrl: './history-page.component.html',
-    styleUrls: ['./history-page.component.css'],
-    standalone: true,
-    imports: [SearchComponent, PlayListBodyComponent, AsyncPipe]
+  selector: 'app-history-page',
+  templateUrl: './history-page.component.html',
+  styleUrls: ['./history-page.component.css'],
+  standalone: true,
+  imports: [SearchComponent, PlayListBodyComponent, AsyncPipe]
 })
 export class HistoryPageComponent implements OnInit {
-  listResults$: Observable<any>= of([])
+  listResults$: Observable<any> = of([])
   constructor(private searchService: SearchService) { }
 
   ngOnInit(): void {
@@ -23,7 +23,7 @@ export class HistoryPageComponent implements OnInit {
   //el event es el term del hijo search
   receiveData(event: string): void {
 
-    console.log('🎁 Estoy en el padre jua jua...', event);
+
     this.listResults$ = this.searchService.searchTracks$(event)
 
 
