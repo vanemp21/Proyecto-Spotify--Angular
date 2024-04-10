@@ -1,4 +1,7 @@
 <div class="search-component">
+    <!-- -----------------ANOTACIÓN---------------- -->
+    <!-- Cada vez que el valor del input cambie se dispara -->
+    <!-- ------------------------------------------ -->
     <input (ngModelChange)="callSearch($event)" [(ngModel)]="src" type="text" placeholder="Artistas, canciones o pódcast">
     <br>
     <div>Resultado: {{src}}</div>

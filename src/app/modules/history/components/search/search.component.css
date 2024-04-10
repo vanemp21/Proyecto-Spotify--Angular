@@ -4,9 +4,11 @@
 
 .search-component input {
     border: 0;
-    border-radius: 3rem;
+    border-radius: 0.6rem;
     height: 40px;
     width: 20rem;
     padding: 0 .75rem;
     font-size: 90%;
+   margin:15px 0px;
+
 }
